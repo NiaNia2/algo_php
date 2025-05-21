@@ -82,6 +82,21 @@
     $c = sqrt($a * $a + $b * $b);
     echo $c;
     ?>
+
+    <?php
+    echo '<h2>Exos 8 <h2>';
+
+    $heure = date('H');
+
+    if (($heure > 6) && ($heure < 11)) {
+        echo "c'est le matin";
+    } else if (($heure > 12) && ($heure < 14)) {
+        echo "c'est le midi";
+    } else {
+        echo "c'est le soir";
+    }
+    // echo $heure
+    ?>
 </body>
 
 </html>
