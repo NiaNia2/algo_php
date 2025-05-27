@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Algo PHP</title>
 </head>
 
 <body>
@@ -97,6 +97,94 @@
     }
     // echo $heure
     ?>
+
+    <?php
+    echo '<h2>Exos 9<h2>';
+
+    $i = 5;
+
+    echo ($i % 2 == 0 ? 'pair' : 'impair');
+    ?>
+
+    <?php
+    echo '<h2>Exos 10 <h2>';
+
+    for ($i = 0; $i <= 100; $i++) {
+        if (($i % 3) && ($i % 5)) {
+            echo 'foobar' . '<br>';
+        } else if ($i % 3) {
+            echo 'foo' . '<br>';
+        } else if ($i % 5) {
+            echo 'bar' . '<br>';
+        } else {
+            echo  $i;
+        }
+    }
+
+    ?>
+
+    <?php
+    echo '<h2>Exos 11<h2>';
+
+    $identitePersonne = [
+        'nom' => 'Croft',
+        'prenom' => 'Lara',
+        'metier' => 'Archéologue'
+    ];
+    echo "C'est un plaisir de vous voir " . $identitePersonne['prenom'] . ' ' . $identitePersonne['nom'] . '. (' . $identitePersonne['metier'] . ')';
+    ?>
+
+    <?php
+    echo '<h2>Exos 12<h2>';
+
+    $fighters = ['Zelda', 'Samus', 'Bowser', 'Peach', 'Lucina'];
+
+    foreach ($fighters as $perso)
+        if (strlen($perso) == 6) {
+            echo $perso . '<br>';
+        }
+    ?>
+
+    <?php
+    echo '<h2>Exos 13 <h2>';
+
+    $number = [10, 23, 5, 35, 8, 15, 80, 6, 29, 61];
+    echo min($number);
+    ?>
+    <?php
+    echo '<h2>Exos 14 <h2>';
+
+    $number = [10, 23, 5, 35, 8, 15, 80, 6, 29, 61];
+    sort($number);
+    foreach ($number as $num) {
+        echo ($num) . '<br>';
+    }
+
+    ?>
+
+    <h2>Exos 15</h2>
+
+    <table>
+        <?php
+        for ($i = 1; $i <= 9; $i++) {
+            echo '<tr>';
+            for ($x = 1; $x <= 9; $x++) {
+                if ($i > 1) {
+                    echo '<td>';
+                    echo $i * $x;
+                    echo '<td>';
+                } else {
+                    echo '<td>';
+                    echo $x;
+                    echo '<td>';
+                }
+            }
+            echo '</tr>';
+        }
+        ?>
+    </table>
+
+
 </body>
 
 </html>
